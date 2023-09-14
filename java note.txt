@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class banking {
+
+	public static void main(String[] args) {
+			   String wantToContinue="N";
+				do {
+					int option=0;
+					System.out.println("select your option from the menu");
+					System.out.println("1 for credit card payment");
+					System.out.println("2 for debit card payment");
+					System.out.println("3 for netbanking payment"); 
+					System.out.println("4 for cash on delivery payment");
+					System.out.println("5 for upi payment");
+					
+					Scanner sc= new Scanner(System.in);
+					 option=sc.nextInt();
+						System.out.println("you selected the option"+option);
+					
+					switch(option) {
+					case 1:
+						System.out.println("enter your credit card number");
+						int creditCardNumber=sc.nextInt();
+						System.out.println("enter your cvv number");
+						int CvvNumber=sc.nextInt();
+						System.out.println("your credit payment is finished");
+						System.out.println("thank you");
+						break;
+					case 2:
+						System.out.println("enter your debit card number");
+						int debitCardNumber=sc.nextInt();
+						System.out.println("your debit card payment is finished");
+						System.out.println("thank you");
+						break;
+					case 3:
+						System.out.println("enter your Account Number");
+						Long accountNumber=sc.nextLong();
+						System.out.println("Enter amount to pay");
+						int amount=sc.nextInt(); 
+						break;
+					case 4:
+						System.out.println("Enter mobile number");
+						int mobileNumber=sc.nextInt();
+						System.out.println("Enter given OTP");
+						int OTP=sc.nextInt();	
+						break;
+					case 5:
+						System.out.println("enter your upi number");
+						long upiNumber=sc.nextLong();
+						System.out.println("your upi payment is finished");
+						System.out.println("thank you");
+						break;
+						
+					default:
+							 System.out.println("Incorrect" +option+",please select the option from (1-5)");
+							 System.out.println("sorry...please try again");
+							 break;
+					}
+							System.out.println("Do you want to continue your shopping ? (Y/N)");
+							wantToContinue=sc.next();
+							
+				}while("Y".equalsIgnoreCase(wantToContinue));
+				
+	
+	}
+}
